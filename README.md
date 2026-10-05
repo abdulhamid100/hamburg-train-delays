@@ -71,8 +71,11 @@ Real-world data needed decisions before any average could be trusted. The checks
 
 ```bash
 pip install -r requirements.txt
+python scripts/fetch_data.py                            # downloads 12 monthly files, keeps the four Hamburg stations
 jupyter notebook notebooks/hamburg_train_delays.ipynb   # builds data/hamburg.db on first run
 ```
+
+The data is not stored in this repository. `scripts/fetch_data.py` downloads each monthly file from the source and writes the Hamburg subset to `data/raw/`.
 
 The Hamburg subset of the data is included in `data/raw/`. To download it again from the source, run `python scripts/fetch_data.py`.
 
